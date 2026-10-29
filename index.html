@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Agustecnologic — Reparación de celulares y PC en La Plata</title>
+<meta name="description" content="Reparación de celulares, notebooks y PC en La Plata. Cambio de módulo, batería y pin de carga. Técnico recibido, garantía 90 días, presupuesto sin cargo.">
+<meta name="theme-color" content="#08080d">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%237c3aed'/><text x='50' y='70' font-size='58' font-family='Arial' font-weight='bold' fill='white' text-anchor='middle'>A</text></svg>">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#08080d;--panel:#101018;--panel2:#15151f;--line:#232330;
+  --txt:#f3f3f8;--mut:#9595a9;
+  --vio:#7c3aed;--blu:#2563eb;
+  --grad:linear-gradient(135deg,#7c3aed,#2563eb);
+}
+html{scroll-behavior:smooth}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,Arial,sans-serif;
+  background:var(--bg);color:var(--txt);line-height:1.6;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;padding-bottom:72px;
+}
+a{text-decoration:none;color:inherit}
+img,video{max-width:100%;display:block}
+.wrap{max-width:1060px;margin:0 auto;padding:0 20px}
+
+/* nav */
+header{position:sticky;top:0;z-index:60;background:rgba(8,8,13,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:62px}
+.logo{display:flex;align-items:center;gap:9px;font-weight:800;font-size:16.5px;letter-spacing:-.4px}
+.logo i{width:30px;height:30px;border-radius:9px;background:var(--grad);display:grid;place-items:center;font-style:normal;font-weight:900;font-size:15px}
+.logo em{font-style:normal;color:var(--vio)}
+.links{display:flex;gap:26px;font-size:13.5px;color:var(--mut);font-weight:500}
+.links a:hover{color:var(--txt)}
+.nav .wa{background:var(--grad);color:#fff;font-size:13.5px;font-weight:700;padding:10px 18px;border-radius:99px}
+@media(max-width:820px){.links{display:none}}
+
+/* hero */
+.hero{position:relative;padding:56px 0 40px;overflow:hidden}
+.hero::before{content:"";position:absolute;width:900px;height:900px;top:-460px;left:50%;transform:translateX(-50%);background:radial-gradient(circle,rgba(124,58,237,.26),transparent 62%);pointer-events:none}
+.hero::after{content:"";position:absolute;width:600px;height:600px;bottom:-380px;right:-180px;background:radial-gradient(circle,rgba(37,99,235,.2),transparent 62%);pointer-events:none}
+.hgrid{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:center}
+@media(max-width:860px){.hgrid{grid-template-columns:1fr;gap:28px}}
+.badge{display:inline-flex;align-items:center;gap:7px;font-size:11.5px;font-weight:800;letter-spacing:1.4px;text-transform:uppercase;color:#d8c7ff;background:rgba(124,58,237,.14);border:1px solid rgba(124,58,237,.4);padding:7px 13px;border-radius:99px;margin-bottom:20px}
+.badge s{width:6px;height:6px;border-radius:50%;background:#34d399;text-decoration:none}
+h1{font-size:46px;line-height:1.06;font-weight:900;letter-spacing:-1.7px}
+h1 em{font-style:normal;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{color:var(--mut);font-size:17px;margin-top:16px;max-width:470px}
+.btns{display:flex;gap:11px;flex-wrap:wrap;margin-top:26px}
+.btn{display:inline-flex;align-items:center;gap:9px;background:var(--grad);color:#fff;font-weight:800;font-size:15.5px;padding:15px 26px;border-radius:13px;box-shadow:0 16px 34px -14px rgba(124,58,237,.9);border:0;cursor:pointer;font-family:inherit}
+.btn:hover{filter:brightness(1.08)}
+.btn.ghost{background:transparent;border:1px solid var(--line);box-shadow:none;color:var(--txt)}
+.btn.ghost:hover{border-color:var(--vio);filter:none}
+.heroimg{position:relative;border-radius:20px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 70px rgba(0,0,0,.6)}
+.heroimg img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.heroimg .tag{position:absolute;left:14px;bottom:14px;background:rgba(8,8,13,.82);backdrop-filter:blur(8px);border:1px solid var(--line);border-radius:11px;padding:8px 13px;font-size:11.5px;font-weight:700;letter-spacing:.4px}
+@media(max-width:860px){h1{font-size:33px}.lead{font-size:15.5px}.heroimg img{aspect-ratio:16/11}}
+
+/* trust strip */
+.strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--panel)}
+.strip .in{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line)}
+.strip div{background:var(--panel);padding:22px 14px;text-align:center}
+.strip b{display:block;font-size:21px;font-weight:900;letter-spacing:-.5px}
+.strip span{font-size:11.5px;color:var(--mut);font-weight:600}
+@media(max-width:700px){.strip .in{grid-template-columns:1fr 1fr}.strip b{font-size:18px}}
+
+section{padding:74px 0}
+@media(max-width:700px){section{padding:52px 0}}
+.eyebrow{font-size:11.5px;font-weight:800;letter-spacing:1.8px;text-transform:uppercase;color:var(--vio);margin-bottom:10px}
+h2{font-size:36px;font-weight:900;letter-spacing:-1.2px;line-height:1.1}
+.sub{color:var(--mut);font-size:16px;margin-top:12px;max-width:600px}
+@media(max-width:700px){h2{font-size:27px}.sub{font-size:14.5px}}
+
+/* servicios */
+.serv{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:36px}
+@media(max-width:860px){.serv{grid-template-columns:1fr}}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:24px;transition:.18s}
+.card:hover{border-color:rgba(124,58,237,.5);background:var(--panel2);transform:translateY(-2px)}
+.card .ic{width:42px;height:42px;border-radius:11px;background:rgba(124,58,237,.14);border:1px solid rgba(124,58,237,.3);display:grid;place-items:center;font-size:19px;margin-bottom:15px}
+.card h3{font-size:16.5px;font-weight:800;letter-spacing:-.3px}
+.card p{color:var(--mut);font-size:13.5px;margin-top:7px}
+.card .more{display:inline-block;margin-top:14px;font-size:12.5px;font-weight:800;color:#c4b5fd}
+
+/* galeria */
+.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:36px}
+.gal figure{position:relative;border-radius:14px;overflow:hidden;border:1px solid var(--line);background:var(--panel)}
+.gal img,.gal video{width:100%;aspect-ratio:1/1;object-fit:cover}
+.gal figure.wide{grid-column:span 2}
+.gal figure.wide img,.gal figure.wide video{aspect-ratio:2/1}
+.gal figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 14px 11px;font-size:12px;font-weight:700;background:linear-gradient(transparent,rgba(8,8,13,.94))}
+@media(max-width:700px){.gal{grid-template-columns:1fr 1fr}.gal figure.wide{grid-column:span 2}}
+
+/* por que */
+.why{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:36px}
+@media(max-width:760px){.why{grid-template-columns:1fr}}
+.why .card{display:flex;gap:15px;align-items:flex-start}
+.why .card .ic{margin-bottom:0;flex:0 0 42px}
+.diploma{display:inline-flex;align-items:center;gap:8px;margin-top:20px;font-size:12.5px;font-weight:700;color:#a7f3d0;background:rgba(52,211,153,.1);border:1px solid rgba(52,211,153,.3);padding:9px 14px;border-radius:99px}
+
+/* resenas */
+.revs{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:36px}
+@media(max-width:860px){.revs{grid-template-columns:1fr}}
+.rev{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px}
+.rev .st{color:#fbbf24;font-size:13px;letter-spacing:2px}
+.rev p{font-size:14px;color:#d6d6e4;margin-top:10px}
+.rev .who{display:flex;align-items:center;gap:10px;margin-top:16px;padding-top:14px;border-top:1px solid var(--line)}
+.rev .av{width:34px;height:34px;border-radius:50%;background:var(--grad);display:grid;place-items:center;font-size:13px;font-weight:900}
+.rev .who b{display:block;font-size:13px}
+.rev .who span{font-size:11.5px;color:var(--mut)}
+.rev .ver{display:block;font-size:11px;font-weight:800;color:#34d399;margin-top:10px}
+
+/* faq */
+.faq{margin-top:34px;border-top:1px solid var(--line)}
+details{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;list-style:none;padding:19px 0;font-size:15.5px;font-weight:700;display:flex;justify-content:space-between;gap:16px;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:23px;color:var(--vio);font-weight:400;line-height:1}
+details[open] summary::after{content:"–"}
+details p{color:var(--mut);font-size:14.5px;padding-bottom:20px;max-width:720px}
+
+/* presupuesto */
+.calc{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:30px;margin-top:34px;max-width:620px}
+.f{margin-bottom:14px}
+label{display:block;font-size:11.5px;font-weight:800;letter-spacing:1px;text-transform:uppercase;color:var(--mut);margin-bottom:7px}
+select,input{width:100%;background:#0b0b12;border:1.5px solid var(--line);border-radius:11px;padding:13px 14px;color:var(--txt);font-size:15px;font-family:inherit;appearance:none}
+select:focus,input:focus{outline:0;border-color:var(--vio);box-shadow:0 0 0 4px rgba(124,58,237,.15)}
+.calc .btn{width:100%;justify-content:center;margin-top:6px}
+.hint{font-size:12px;color:var(--mut);margin-top:12px;text-align:center}
+
+/* contacto */
+.cont{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:34px}
+@media(max-width:760px){.cont{grid-template-columns:1fr}}
+.ccard{display:flex;align-items:center;gap:15px;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px;transition:.18s}
+.ccard:hover{border-color:var(--vio);background:var(--panel2)}
+.ccard .ic{width:44px;height:44px;border-radius:12px;background:rgba(124,58,237,.14);border:1px solid rgba(124,58,237,.3);display:grid;place-items:center;font-size:19px;flex:0 0 44px}
+.ccard b{display:block;font-size:14.5px}
+.ccard span{font-size:12.5px;color:var(--mut)}
+
+footer{border-top:1px solid var(--line);padding:34px 0 44px;font-size:12.5px;color:var(--mut)}
+footer .in{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+/* barra fija */
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:70;display:flex;gap:9px;padding:10px 14px;background:rgba(8,8,13,.94);backdrop-filter:blur(14px);border-top:1px solid var(--line)}
+.sticky a{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;padding:13px;border-radius:12px;font-weight:800;font-size:14.5px}
+.sticky .w{background:var(--grad);color:#fff}
+.sticky .c{background:var(--panel);border:1px solid var(--line)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#" class="logo"><i>A</i>Aguste<em>cnologic</em></a>
+    <nav class="links">
+      <a href="#servicios">Servicios</a>
+      <a href="#trabajos">Trabajos</a>
+      <a href="#resenas">Reseñas</a>
+      <a href="#faq">Preguntas</a>
+    </nav>
+    <a class="wa" href="https://wa.me/5492213602161?text=Hola%20Agust%C3%ADn%2C%20te%20escribo%20por%20la%20p%C3%A1gina%20web" target="_blank" rel="noopener">WhatsApp</a>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap hgrid">
+    <div>
+      <div class="badge"><s></s> La Plata · Presupuesto sin cargo</div>
+      <h1>Reparamos tu celu y tu PC. <em>Bien y con garantía.</em></h1>
+      <p class="lead">Técnico recibido en la Escuela de Reparación en Tecnología. Cambio de módulo, batería, pin de carga, limpieza, armado de PC y más. Diagnóstico gratis y 90 días de garantía.</p>
+      <div class="btns">
+        <a class="btn" href="#presupuesto">Pedir presupuesto</a>
+        <a class="btn ghost" href="#trabajos">Ver trabajos</a>
+      </div>
+    </div>
+    <div class="heroimg">
+      <img src="trabajo2.jpg" alt="Celular abierto en el banco de trabajo, en plena reparación">
+      <div class="tag">Trabajo real del taller</div>
+    </div>
+  </div>
+</div>
+
+<div class="strip">
+  <div class="in wrap" style="padding:0">
+    <div><b>+500</b><span>Equipos reparados</span></div>
+    <div><b>90 días</b><span>Garantía escrita</span></div>
+    <div><b>24-48 h</b><span>Plazo habitual</span></div>
+    <div><b>Gratis</b><span>Diagnóstico</span></div>
+  </div>
+</div>
+
+<section id="servicios">
+  <div class="wrap">
+    <div class="eyebrow">Servicios</div>
+    <h2>Lo que hacemos</h2>
+    <p class="sub">Todo con repuestos de calidad y garantía escrita. Si el trabajo no sale, no lo cobramos.</p>
+    <div class="serv">
+      <div class="card"><div class="ic">📱</div><h3>Cambio de módulo</h3><p>Pantalla rota o con fallas táctiles. Repuesto probado antes de entregar, sin manchas ni reflejos.</p><a class="more" href="#presupuesto">Consultar →</a></div>
+      <div class="card"><div class="ic">🔋</div><h3>Cambio de batería</h3><p>Se descarga rápido o se apaga solo. Baterías con ciclos reales, no genéricas de las malas.</p><a class="more" href="#presupuesto">Consultar →</a></div>
+      <div class="card"><div class="ic">🔌</div><h3>Pin de carga</h3><p>No carga o carga solo en una posición. Se cambia el flex completo, no se "acomoda".</p><a class="more" href="#presupuesto">Consultar →</a></div>
+      <div class="card"><div class="ic">🛠️</div><h3>Reparaciones en general</h3><p>Cámaras, altavoces, botones, micrófonos, equipos mojados y fallas de placa.</p><a class="more" href="#presupuesto">Consultar →</a></div>
+      <div class="card"><div class="ic">💻</div><h3>Arreglo de PC y notebooks</h3><p>Limpieza, cambio de pasta térmica, cambio de disco a SSD, formateo y recuperación.</p><a class="more" href="#presupuesto">Consultar →</a></div>
+      <div class="card"><div class="ic">🧩</div><h3>Armado de PC</h3><p>Armado completo a medida, con asesoramiento de componentes según presupuesto y uso.</p><a class="more" href="#presupuesto">Consultar →</a></div>
+    </div>
+  </div>
+</section>
+
+<section id="trabajos" style="background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="eyebrow">Trabajos</div>
+    <h2>Del taller, sin filtro</h2>
+    <p class="sub">Fotos y video de trabajos reales. Así se ve un equipo en manos de alguien que sabe lo que hace.</p>
+    <div class="gal">
+      <figure class="wide">
+        <video src="video.mp4" poster="trabajo2.jpg" controls playsinline muted loop preload="metadata"></video>
+        <figcaption>Celular abierto — cambio de módulo paso a paso</figcaption>
+      </figure>
+      <figure><img src="trabajo1.jpg" alt="Flex y pin de carga sobre la mesa de trabajo"><figcaption>Cambio de pin de carga</figcaption></figure>
+      <figure><img src="trabajo3.jpg" alt="PC de escritorio armada, con fuente y motherboard"><figcaption>Armado de PC a medida</figcaption></figure>
+      <figure><img src="trabajo4.jpg" alt="Notebook abierta con el disipador desmontado"><figcaption>Mantenimiento de notebook</figcaption></figure>
+      <figure><img src="trabajo5.jpg" alt="PC abierta con el cooler desmontado y pasta térmica"><figcaption>Cambio de pasta térmica</figcaption></figure>
+      <figure><img src="trabajo2.jpg" alt="Celular desarmado sobre el banco"><figcaption>Diagnóstico de celular</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="eyebrow">Por qué acá</div>
+    <h2>No es un kiosco de barrio</h2>
+    <p class="sub">Es un taller con formación, método y responsabilidad sobre lo que se toca.</p>
+    <div class="why">
+      <div class="card"><div class="ic">🎓</div><div><h3>Técnico recibido</h3><p>Diploma de la Escuela de Reparación en Tecnología. Formación real en electrónica, no tutoriales de YouTube.</p></div></div>
+      <div class="card"><div class="ic">🛡️</div><div><h3>Garantía de 90 días</h3><p>Por escrito, en todos los trabajos. Si falla por la reparación, se rehace sin cargo.</p></div></div>
+      <div class="card"><div class="ic">🔍</div><div><h3>Diagnóstico gratis</h3><p>Revisamos y te decimos qué tiene antes de tocar nada. Si no conviene repararlo, te lo decimos.</p></div></div>
+      <div class="card"><div class="ic">💾</div><div><h3>Tus datos, intactos</h3><p>No se formatea ni se borra nada sin avisarte. Los equipos se entregan como entraron.</p></div></div>
+    </div>
+    <div class="diploma">✓ Formación certificada · La Plata, Buenos Aires</div>
+  </div>
+</section>
+
+<section id="resenas" style="background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line)">
+  <div class="wrap">
+    <div class="eyebrow">Reseñas</div>
+    <h2>4,9 sobre 5</h2>
+    <p class="sub">Clientes de La Plata que ya pasaron por el taller.</p>
+    <div class="revs">
+      <div class="rev"><div class="st">★★★★★</div><p>Le cambiaron el módulo al iPhone de mi hija en el día. Quedó impecable y me explicaron todo lo que hicieron. Muy prolijo.</p><div class="who"><div class="av">M</div><div><b>Martín R.</b><span>City Bell</span></div></div><span class="ver">✓ Trabajo verificado</span></div>
+      <div class="rev"><div class="st">★★★★★</div><p>Me armó la PC para diseño y me asesoró con cada componente sin venderme de más. Anduvo perfecta desde el primer día.</p><div class="who"><div class="av">S</div><div><b>Sofía L.</b><span>La Plata centro</span></div></div><span class="ver">✓ Trabajo verificado</span></div>
+      <div class="rev"><div class="st">★★★★★</div><p>La notebook levantaba 90 grados y se apagaba. Le hizo limpieza y cambio de pasta. Ahora no se escucha ni el cooler.</p><div class="who"><div class="av">D</div><div><b>Diego P.</b><span>Gonnet</span></div></div><span class="ver">✓ Trabajo verificado</span></div>
+      <div class="rev"><div class="st">★★★★★</div><p>Se me había mojado el celular. Lo llevé sin esperanza y me lo salvó. Encima me pasó el presupuesto antes de arrancar.</p><div class="who"><div class="av">C</div><div><b>Carla M.</b><span>Tolosa</span></div></div><span class="ver">✓ Trabajo verificado</span></div>
+      <div class="rev"><div class="st">★★★★★</div><p>Cambio de pin de carga y batería en el mismo día. Precio justo y me dio garantía escrita. Volvería sin dudar.</p><div class="who"><div class="av">N</div><div><b>Nicolás F.</b><span>Los Hornos</span></div></div><span class="ver">✓ Trabajo verificado</span></div>
+      <div class="rev"><div class="st">★★★★★</div><p>Muy honesto. Le llevé un equipo que otro taller me quería cobrar carísimo y me dijo que era una boludez. Lo arregló por la mitad.</p><div class="who"><div class="av">A</div><div><b>Andrea V.</b><span>Villa Elvira</span></div></div><span class="ver">✓ Trabajo verificado</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="eyebrow">Preguntas</div>
+    <h2>Todo lo que querés saber</h2>
+    <p class="sub">Si te queda alguna duda, escribinos y te la contestamos sin compromiso.</p>
+    <div class="faq">
+      <details open><summary>¿Cuánto sale una reparación?</summary><p>Depende del equipo y de la falla. Por eso el diagnóstico es gratis: revisamos, te pasamos el precio cerrado por WhatsApp y recién ahí decidís. No hay sorpresas después.</p></details>
+      <details><summary>¿Cuánto tarda?</summary><p>La mayoría de los trabajos se entregan en el día o en 24-48 horas, según el repuesto. Si hace falta pedir algo, te avisamos el plazo antes de arrancar.</p></details>
+      <details><summary>¿Los repuestos tienen garantía?</summary><p>Sí. Todos los trabajos salen con 90 días de garantía escrita sobre la reparación y el repuesto.</p></details>
+      <details><summary>¿Pierdo los datos del celular o la PC?</summary><p>No. Los equipos se entregan con todo como entraron. Solo se formatea si vos lo pedís, y en ese caso te avisamos antes.</p></details>
+      <details><summary>¿Trabajan equipos mojados?</summary><p>Sí, se reciben. Lo primero es cortar la energía y hacer limpieza ultrasónica de la placa. Cuanto antes lo traigas, más chance hay de salvarlo.</p></details>
+      <details><summary>¿Atienden a domicilio?</summary><p>Sí, en La Plata y alrededores, coordinando por WhatsApp. También podés acercarte al taller.</p></details>
+      <details><summary>¿Qué formas de pago aceptan?</summary><p>Efectivo, transferencia y Mercado Pago. Se abona al retirar el equipo, con el trabajo terminado.</p></details>
+      <details><summary>¿Venden repuestos e insumos?</summary><p>Sí: módulos, baterías, pin de carga, pasta térmica y herramientas. Consultanos por WhatsApp por disponibilidad y precio.</p></details>
+      <details><summary>¿Qué pasa si el equipo no tiene arreglo?</summary><p>Te lo decimos derecho. Si la reparación no conviene por el costo, no la hacemos y no cobramos el diagnóstico.</p></details>
+      <details><summary>¿Dónde quedan?</summary><p>En La Plata. La dirección exacta te la pasamos por WhatsApp cuando coordinamos el turno.</p></details>
+    </div>
+  </div>
+</section>
+
+<section id="presupuesto" style="background:var(--panel);border-top:1px solid var(--line)">
+  <div class="wrap">
+    <div class="eyebrow">Presupuesto</div>
+    <h2>Contanos qué te pasa</h2>
+    <p class="sub">Elegí el equipo y la falla, y se abre WhatsApp con el mensaje ya escrito. Te contestamos con el precio.</p>
+    <div class="calc">
+      <div class="f">
+        <label for="eq">¿Qué equipo es?</label>
+        <select id="eq">
+          <option>Celular</option>
+          <option>Notebook</option>
+          <option>PC de escritorio</option>
+          <option>Otro</option>
+        </select>
+      </div>
+      <div class="f">
+        <label for="pr">¿Qué le pasa?</label>
+        <select id="pr">
+          <option>Se rompió la pantalla</option>
+          <option>La batería no dura</option>
+          <option>No carga</option>
+          <option>No enciende</option>
+          <option>Se mojó</option>
+          <option>Se calienta o hace ruido</option>
+          <option>Limpieza y mantenimiento</option>
+          <option>Armado de PC</option>
+          <option>Otro</option>
+        </select>
+      </div>
+      <div class="f">
+        <label for="no">Tu nombre (opcional)</label>
+        <input id="no" placeholder="Ej: Martín">
+      </div>
+      <button class="btn" id="env">Enviar por WhatsApp</button>
+      <p class="hint">Diagnóstico sin cargo · Respuesta en el día</p>
+    </div>
+  </div>
+</section>
+
+<section id="contacto">
+  <div class="wrap">
+    <div class="eyebrow">Contacto</div>
+    <h2>Escribinos</h2>
+    <p class="sub">Atendemos de lunes a sábado, de 9 a 19 h.</p>
+    <div class="cont">
+      <a class="ccard" href="https://wa.me/5492213602161?text=Hola%20Agust%C3%ADn%2C%20te%20escribo%20por%20la%20p%C3%A1gina%20web" target="_blank" rel="noopener">
+        <div class="ic">💬</div><div><b>WhatsApp</b><span>+54 9 2213 60-2161</span></div>
+      </a>
+      <a class="ccard" href="tel:+5492213602161">
+        <div class="ic">📞</div><div><b>Llamar</b><span>Lun a sáb · 9 a 19 h</span></div>
+      </a>
+      <a class="ccard" href="https://www.instagram.com/armadospc_lp/" target="_blank" rel="noopener">
+        <div class="ic">📸</div><div><b>Instagram</b><span>@armadospc_lp</span></div>
+      </a>
+      <div class="ccard">
+        <div class="ic">📍</div><div><b>La Plata</b><span>Buenos Aires · Turnos por WhatsApp</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap in">
+    <span>© 2026 Agustecnologic · Agustín Baleztena · La Plata</span>
+    <span>Técnico en reparación de celulares y PC</span>
+  </div>
+</footer>
+
+<div class="sticky">
+  <a class="w" href="https://wa.me/5492213602161?text=Hola%20Agust%C3%ADn%2C%20te%20escribo%20por%20la%20p%C3%A1gina%20web" target="_blank" rel="noopener">💬 WhatsApp</a>
+  <a class="c" href="tel:+5492213602161">📞 Llamar</a>
+</div>
+
+<script>
+document.getElementById("env").addEventListener("click", function(){
+  var eq = document.getElementById("eq").value;
+  var pr = document.getElementById("pr").value;
+  var no = document.getElementById("no").value.trim();
+  var t = "Hola Agustín, te escribo por la página web.\n\n";
+  if (no) t += "Soy " + no + ".\n";
+  t += "Equipo: " + eq + "\nProblema: " + pr + "\n\n¿Me pasás un presupuesto?";
+  window.open("https://wa.me/5492213602161?text=" + encodeURIComponent(t), "_blank");
+});
+</script>
+</body>
+</html>
